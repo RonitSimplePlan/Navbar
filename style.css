@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.navbar{
+    position: relative;
+    box-shadow:0 2px 5px 0 rgba(0, 0, 0, 0.19);
+}
+.res-nav{
+    display: none;
+}
+.inner-nav{
+    width: 100%;
+}
+.nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.inr-wrap{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.inr-list > ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.nav-drop{
+    background: url(/Images/drop-img.svg) ;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 59px;
+    width: 100%;
+    background-color: #e8f3ef;
+    z-index: 10;
+    height: 0;
+    overflow: hidden;
+    transition: .5s ease all;
+    
+}
+.navd-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50%;
+    padding-right: 300px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.inr-list a{
+    padding: 28px 0;
+}
+.inr-list ul li a{
+    position: relative;
+}
+.inr-list > ul li a::after{
+    content: '';
+    width: 0;
+    background-color: green;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 25px;
+    display: flex;
+    transition: .3s ease all;
+}
+.inr-list > ul li:hover a::after{
+    width: 100%;
+}
+.inr-list > ul li a:hover{
+    color: green;
+}
+.nav-item:hover .nav-drop{
+    height: 800%;
+}
+.inner-nav-dropdown{
+    display: flex;
+    justify-content: center;
+    gap: 210px;
+    padding: 100px 0;
+}
+.nav-dropdown-right-head h3{
+    font-size: 14px;
+    color: rgba(17, 134, 87, 1);
+    font-weight: 600;
+}
+.nav-dropdown-right-text{
+    background-color: rgba(17, 134, 87, .2);
+    min-width: 216px;
+    border-radius: 5px;
+}
+.nav-dropdown-right-text ul{
+    padding: 10px 30px;
+    padding-right: 60px;
+}
+.nav-dropdown-right-text ul li{
+    padding: 8px 0;
+    color: rgba(17, 134, 87, 1);
+    cursor: pointer;
+}
+.nav-dropdown-right-text ul li:hover{
+    font-weight: 600;
+    color: rgba(17, 134, 87, 1);
+}
+.nav-dropdown-left{
+    display: flex;
+    gap: 60px;
+}
+.nav-dropdown-left-list ul{
+    min-width: 200px;
+}
+.nav-dropdown-left-list ul li{
+    color: #4d4d4d;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+.nav-dropdown-left-list ul li:hover{
+    background-color: rgba(17, 134, 87, 1);
+    color: #fff;
+    /* font-weight: 600; */
+    border-radius: 5px;
+}
+.bd-srch input{
+    width: 100%;
+    border: none;
+}
+.bds-wrap{
+    padding: 10px 20px;
+}
+.bd-srch{
+    border: 1px solid #4d4d4d;
+    padding: 10px 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.bd-srch input:focus{
+    outline: none;
+}
+@media (max-width: 768px){
+    
+    .inr-list > ul{
+        display: none;
+    }
+    .res-nav{
+        display: block;
+    }
+    .res-nav img{
+        width: 30px;
+    }
+    .inner-nav{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .rnn-wrap{
+        height: 100dvh;
+        position: absolute;
+        left: 0;
+        top: 60px;
+        background-color: #fff;
+        width: 100%;
+        padding: 30px 0;
+        overflow: hidden;
+        display: none;
+    }
+    .rn-item > ul{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .rn-item > ul > li{
+        position: relative;
+        padding-bottom: 20px;
+    }
+    .rn-item > ul > li::after{
+        content: '';
+        background-color: #999797;
+        width: 90%;
+        height: 2px;
+        position: absolute;
+        left: 0px;
+        bottom: 0;
+    }
+    .nav-drop{
+        position: relative;
+        height: auto;
+        background: none;
+        top: 0;
+        padding: 20px 30px;
+        display: none;
+        transition: none;
+        background-color: #e8f3ef;
+        width: 95%;
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+    .inner-nav-dropdown{
+        padding: 0;
+        gap: 0px;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+    .nav-dropdown-left{
+        flex-wrap: wrap;
+    }
+    .nav-dropdown-right-head h3{
+        padding-left: 30px;
+    }
+    .nav-dropdown-right-text ul{
+        padding-right: 30px;
+    }
+}
+@media (max-width: 1200px){
+    .inner-nav-dropdown{
+        gap: 20px;
+    }
+    .nav-dropdown-left{
+        gap: 20px;
+    }
+}
